@@ -155,7 +155,7 @@ public class x01_script : MonoBehaviour
     private void ObtainTargetScore()
     {
         List<int> snDigits = KMBombInfoExtensions.GetSerialNumberNumbers(BombInfo).ToList();
-        int AAbatteriesPlusSNDigitCount = KMBombInfoExtensions.GetBatteryCount(BombInfo, Battery.AA) + snDigits.Count;
+        int AAbatteriesPlusSNDigitCount = KMBombInfoExtensions.GetBatteryCount(BombInfo, Battery.AA) + KMBombInfoExtensions.GetBatteryCount(BombInfo, Battery.AAx3) + KMBombInfoExtensions.GetBatteryCount(BombInfo, Battery.AAx4) + snDigits.Count;
         int portsPlusIndicatorsCount = KMBombInfoExtensions.GetPortCount(BombInfo) + KMBombInfoExtensions.GetIndicators(BombInfo).ToList().Count;
 
         int rowIndex, columnIndex;
